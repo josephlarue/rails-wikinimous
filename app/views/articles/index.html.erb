@@ -1,0 +1,12 @@
+<ul>
+  <% @articles.each do |article| %>
+    <div>
+    <p>Title: 
+    <%=link_to article.title, article_path(article) %></p>
+    <p>Content: <%= article.content %></p>
+    <h1>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h1>
+    </div>
+    <% end %>
+</ul>
+
+<a href="http://localhost:3000/articles/new" class="btn-home" role="button" aria-disabled="true"><p>Create</p></a>
